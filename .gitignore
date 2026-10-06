@@ -1,0 +1,7 @@
+.build/
+.swiftpm/
+.DS_Store
+LocalAssets/
+raycast/node_modules/
+raycast/dist/
+raycast/*.rayext

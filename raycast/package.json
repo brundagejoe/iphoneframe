@@ -1,0 +1,76 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "iphoneframe",
+  "title": "iPhoneFrame",
+  "description": "Frame your clipboard screenshot as a black iPhone and copy it back, ready to paste.",
+  "icon": "extension-icon.png",
+  "author": "joebrundage",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Design Tools",
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "frame-clipboard",
+      "title": "Frame Clipboard as iPhone",
+      "description": "Put the clipboard image in your configured black iPhone frame and copy the result back.",
+      "mode": "no-view",
+      "keywords": [
+        "screenshot",
+        "phone",
+        "bezel",
+        "slides"
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "projectDirectory",
+      "type": "directory",
+      "required": false,
+      "title": "iPhoneFrame Project Folder",
+      "description": "Folder containing bin/iphoneframe and frame.json.",
+      "default": "~/Documents/projects/iphoneframe"
+    },
+    {
+      "name": "fit",
+      "type": "dropdown",
+      "required": false,
+      "title": "Screenshot Fit",
+      "description": "Preserve all content or crop to fill the display.",
+      "default": "contain",
+      "data": [
+        {
+          "title": "Preserve All Content",
+          "value": "contain"
+        },
+        {
+          "title": "Fill Display",
+          "value": "fill"
+        }
+      ]
+    }
+  ],
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "lint": "eslint src && prettier --check src",
+    "fix-lint": "eslint src --fix && prettier --write src",
+    "build:beta": "ray build -o \"$HOME/.config/raycast-x/extensions/iphoneframe\""
+  },
+  "dependencies": {
+    "@raycast/api": "2.6.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.9.2"
+  }
+}

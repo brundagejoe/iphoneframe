@@ -1,0 +1,22 @@
+{
+  "model": "iPhone 18 Pro - Black",
+  "frame": "LocalAssets/iPhone 18 Pro - Black - Portrait.png",
+  "screen": {
+    "x": 72,
+    "y": 69,
+    "width": 1206,
+    "height": 2622
+  },
+  "cornerRadius": 180,
+  "shadow": false,
+  "landscape": {
+    "frame": "LocalAssets/iPhone 18 Pro - Black - Landscape.png",
+    "screen": {
+      "x": 69,
+      "y": 72,
+      "width": 2622,
+      "height": 1206
+    },
+    "cornerRadius": 180
+  }
+}
